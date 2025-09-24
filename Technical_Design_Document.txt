@@ -1,0 +1,42 @@
+# Data Engineer Deliverables
+
+## 1. Technical Design Document
+
+### Summary
+This project implements a Hadoop MapReduce application to perform word count on a text file stored in HDFS. The system processes input data, splits it into words, counts occurrences, and stores results in HDFS. The design ensures scalability and fault tolerance using Hadoop's distributed framework, suitable for large datasets.
+
+### Data Flow/Architecture Flow
+- **Input**: Text file uploaded to HDFS.
+- **Processing**: MapReduce job splits text into words (Mapper), aggregates counts (Reducer).
+- **Output**: Word counts saved to HDFS.
+     
+### Project Structure
+wordcount_project/
+├── src/
+│   └── WordCount.java
+├── input/
+│   └── sample.txt
+├── output/
+└── pom.xml (for Maven build)
+
+### Tech Stack
+- **Hadoop**: 3.x (HDFS, MapReduce)
+- **Java**: JDK 11
+- **Maven**: Build tool
+- **OS**: Ubuntu/Linux (local or cloud-based)
+
+### Environment Details
+- Hadoop cluster (single-node setup for demo).
+- Local machine: 8GB RAM, Ubuntu 20.04.
+- HDFS configured at `hdfs://localhost:9000`.
+
+### Test Case Details
+1. **Test Case 1**: Validate input file processing.
+   - Input: Sample text file with 100 words.
+   - Expected: Correct word counts in output.
+2. **Test Case 2**: Handle empty input file.
+   - Input: Empty text file.
+   - Expected: Empty output or error message.
+3. **Test Case 3**: Process large file (1MB).
+   - Input: Large text file.
+   - Expected: Accurate counts within 5 minutes.
