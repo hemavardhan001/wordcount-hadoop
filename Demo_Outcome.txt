@@ -1,0 +1,7 @@
+Input: sample.txt with content "hello world hello hadoop"
+Command: hadoop jar wordcount.jar WordCount /input/sample.txt /output
+Output:
+hadoop  1
+hello   2
+world   1
+Explanation: This output is derived theoretically based on the MapReduce logic in WordCount.java. The Mapper splits the input into words, emitting each with a count of 1, and the Reducer aggregates the counts for each word.

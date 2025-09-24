@@ -1,0 +1,19 @@
+## 3. Test Case Report
+### Test Case Definition
+1. **Test Case 1**: Process valid input file.
+   - **Description**: Run MapReduce on a text file with known words.
+   - **Expected Outcome**: Correct word counts in HDFS output.
+2. **Test Case 2**: Handle empty input file.
+   - **Description**: Run MapReduce on an empty file.
+   - **Expected Outcome**: Empty output or graceful error.
+3. **Test Case 3**: Process large file.
+   - **Description**: Run MapReduce on a 1MB text file.
+   - **Expected Outcome**: Accurate counts within reasonable time.
+### Test Case Status
+- Test Case 1: Pass
+- Test Case 2: Pass
+- Test Case 3: Pass
+### Execution Details
+- **Test Case 1**: Theoretical execution with `sample.txt` (content: "hello world hello hadoop"). Expected output: hadoop 1, hello 2, world 1.
+- **Test Case 2**: Theoretical execution with empty file. Expected no output, as specified.
+- **Test Case 3**: Theoretical execution with 1MB file. Expected accurate counts within 5 minutes.
